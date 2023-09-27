@@ -1,10 +1,14 @@
 
 // Begin with a function called getComputerChoice that will randomly return either ‘Rock’, ‘Paper’ or ‘Scissors’.
 
-const options = ['rock', 'paper', 'scissors']; // I wanna use this variable name later in the userChoice function. I've learned this cannot use outside of the global scope, so I need it inside the userChoice function.
+const options = ['rock', 'paper', 'scissors'];
 function getComputerChoice() {
     return (options[Math.floor(Math.random() * 3)]);
 }
+
+//Create a function userChoice and get inputs from user.
+
+
 
 // Create a function which checks one winner //
 
@@ -37,17 +41,9 @@ function PlayRound(playerSelection, computerSelection) {
     }
 }
 
-//Create a function userChoice and get inputs from the user.
-
-function getUserChoice() {
-    let input = prompt('Choose: rock, paper or scissors');
-    input = input.toLowerCase();
-    console.log(input)
-}
 
 
-
-const playerSelection = getUserChoice();
+const playerSelection = 'rock'
 const computerSelection = getComputerChoice();
 console.log(PlayRound(playerSelection, computerSelection));
 
